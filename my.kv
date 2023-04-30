@@ -1,0 +1,82 @@
+#:kivy 1.11.0
+<BWI@RippleButton>
+<Scroll@Scroll_for_wallpapers>
+<FrontScreen>
+    FloatLayout:
+        Image:
+            source: "file.png"
+            size_hint: (None, None)
+            size: (100,100)
+            pos_hint: {'center_x': .5, 'center_y': .7}
+            allow_stretch: False
+
+<MainScreen>
+    GridLayout:
+        size: root.size
+        pos: root.pos
+        rows:6
+
+        Label:
+            font_size: 28
+            text: "Wallpaper Changer"
+            size_hint_y: .25
+            pos_hint:(.5, None)
+
+        TextInput:
+            id:username
+            focus: False
+            multiline: False
+            font_size: 18
+            size_hint: (0.15, 0.15)
+
+        TextInput:
+            id:password
+            focus: False
+            multiline: False
+            font_size: 18
+            size_hint: (0.15, 0.15)
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint_y: .1
+
+            Image:
+                source: "file.png"
+                size_hint: (None, None)
+                size: (70,50)
+
+            GridLayout:
+                cols:3
+                padding: [150,0,150,0]
+
+                Label:
+                    markup: True
+                    #font_name: "dejavu sans regular"
+                    text: "Subreddit:   r/"
+                    font_size: 18
+                    padding: [0,0]
+                    size_hint_x: None
+                    width: self.texture_size[0]
+
+                TextInput:
+                    id:reddit_name
+                    focus: False
+                    multiline: False
+                    font_size: 18
+                    size_hint: (0.15, 0.15)
+                    padding: (10,12)
+
+                BWI:
+                    #opacity: 1 if self.state == "normal" else .5
+                    background_normal: "file.png"
+                    size_hint: (None, None)
+                    size: (50,50)
+                    on_release: root.do()
+        
+        Scroll:
+            
+            GridLayout:
+                cols: 3
+                
+        Label:
+            text:"DOAEO"

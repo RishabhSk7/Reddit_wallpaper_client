@@ -1,0 +1,6 @@
+__pycache__/
+.vscode/
+Resources/
+WP/
+text.py
+cache/
