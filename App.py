@@ -1,4 +1,7 @@
 #https://labdeck.com/python-designer/python-gui-designer/
+#Rishabh_0507
+#Aowu282n@££@2927Ka
+
 
 import time
 from kivy.app import App
@@ -23,12 +26,16 @@ class MainScreen(Screen):
             list1, status = Start(self.ids.reddit_name.text, self.ids.username.text, self.ids.password.text)
             print(list1)
             f = open(
-                f"/home/rishabh/Documents/Python/Wallpaper_proper/cache/{name}", "wb")
+                f"/home/Sk7/Documents/python/Python/Wallpaper_proper/cache/{name}", "wb")
             image = requests.get(random.choice(list1))
             f.write(image.content)
             f.close()
-            os.system(
-                f"/usr/bin/gsettings set org.gnome.desktop.background picture-uri /home/rishabh/Documents/Python/Wallpaper_proper/cache/{name}")
+            #for KDE
+            os.system(f'plasma-apply-wallpaperimage /home/Sk7/Documents/python/Python/Wallpaper_proper/cache/{name}')
+
+            #for Gnome
+            # os.system(
+            #     f"/usr/bin/gsettings set org.gnome.desktop.background picture-uri /home/Sk7/Documents/python/Python/Wallpaper_proper/cache/{name}")
             
         
 class FrontScreen(Screen):
