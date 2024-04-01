@@ -38,6 +38,3 @@ def network(sub_r, name, password):
                 list1.append(i["data"]["url"])
 
     return list1
-
-if(__name__=="__main__"):
-    print(network("wallpaper", "Rishabh_0507", "Aowu282n@££@2927Ka"))

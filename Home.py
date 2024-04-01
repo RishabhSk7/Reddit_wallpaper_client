@@ -23,7 +23,7 @@ def Start(_,a):
         os.system(f"/usr/bin/gsettings set org.gnome.desktop.background picture-uri /home/rishabh/Documents/Python/Wallpaper/{name}")
         print("online")
 
-    except Exception as E:
+    except Exception as error:
 
         print(E)
 

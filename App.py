@@ -1,6 +1,5 @@
 #https://labdeck.com/python-designer/python-gui-designer/
-#Rishabh_0507
-#Aowu282n@££@2927Ka
+
 
 
 import time
